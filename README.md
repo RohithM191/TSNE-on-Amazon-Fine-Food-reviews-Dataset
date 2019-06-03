@@ -1,4 +1,4 @@
-# Amazon-Food-Reviews-Analysis-and-Modelling Using Various Machine Learning Models
+# Amazon-Food-Reviews-Analysis using various Machine Learning Models
 
 
 #### Performed Exploratory Data Analysis, Data Cleaning, Data Visualization and Text Featurization(BOW, tfidf,AVG Word2Vec,TF-IDF W2V). Build several ML models like TSNE,KNN, Naive Bayes, Logistic Regression, SVM,Decision Tree,Random Forest, GBDT.
