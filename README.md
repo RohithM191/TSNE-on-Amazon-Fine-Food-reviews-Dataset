@@ -1,7 +1,7 @@
 # Amazon-Food-Reviews-Analysis-and-Modelling Using Various Machine Learning Models
 
 
-#### Performed Exploratory Data Analysis, Data Cleaning, Data Visualization and Text Featurization(BOW, tfidf, Word2Vec). Build several ML models like KNN, Naive Bayes, Logistic Regression, SVM, Random Forest, GBDT, LSTM(RNNs) etc.
+#### Performed Exploratory Data Analysis, Data Cleaning, Data Visualization and Text Featurization(BOW, tfidf,AVG Word2Vec,TF-IDF W2V). Build several ML models like TSNE,KNN, Naive Bayes, Logistic Regression, SVM,Decision Tree,Random Forest, GBDT.
 
 ### Objective:
 Given a text review, determine the sentiment of the review whether its positive or negative.
@@ -42,7 +42,7 @@ Attribute Information:
 
 ### 2 KNN
 1. Applied K-Nearest Neighbour on Different Featurization of Data viz. BOW(uni-gram), tfidf, Avg-Word2Vec and tf-idf-Word2Vec 
-2. Used both brute & kd-tree implementation of KNN 
+2. By using both brute & kd-tree implementation of KNN 
 3. Evaluated the test data on various performance metrics like accuracy also plotted Confusion matrix 
 using seaborne
 
@@ -50,14 +50,13 @@ using seaborne
 1.  KNN is a very slow Algorithm takes very long time to train.
 2.  Best Accuracy  is achieved by Avg Word2Vec Featurization which is of 89.38%.
 3.  Both kd-tree and brute algorithms of KNN gives comparatively similar results.
-4.  Overall KNN was not that good for this dataset.
 <hr>
 
 
 ### 3 Naive Bayes
-1. Applied Naive Bayes using Bernoulli NB and Multinomial NB on Different Featurization of Data viz. BOW(uni-gram), tfidf. 
+1. Applied Naive Bayes using Bernoulli NB and Multinomial NB on Different Featurization of Data viz. BOW(uni-gram),TFIDF,AVG-W2V,TFIDF-W2V. 
 2. Evaluated the test data on various performance metrics like accuracy, f1-score, precision, recall,etc. also plotted Confusion matrix using seaborne
-3. Printed Top 25 Important Features for both Negative and Positive Reviews
+3. Printed Top 20 Important Features for both Negative and Positive Reviews
 
 ###### Conclusions:
 1. Naive Bayes is much faster algorithm than KNN
@@ -75,13 +74,13 @@ using seaborne
 
 ###### Conclusions:
 1. Sparsity increases as we decrease C (increase lambda) when we use L1 Regularizer for regularization.
-2. TF_IDF Featurization performs best with F1_score of 0.967 and Accuracy of 91.39.
+2. TF_IDF Featurization performs best with F1_score & roc_auc score.
 3. Features are multi-collinear with different featurization.
 4. Logistic Regression is faster algorithm.
 <hr>
 
 ### 5 SVM
-1. Applied SVM with rbf(radial basis function) kernel on Different Featurization of Data viz. BOW(uni-gram), tfidf, Avg-Word2Vec and tf-idf-Word2Vec 
+1. Applied SVM with RBF(radial basis function) kernel on Different Featurization of Data viz. BOW(uni-gram), tfidf, Avg-Word2Vec and tf-idf-Word2Vec 
 2. Used both Grid Search & Randomized Search Cross Validation 
 3. Evaluated the test data on various performance metrics like accuracy, f1-score, precision, recall,etc. also plotted Confusion matrix using seaborne
 4. Evaluated SGDClassifier on the best resulting featurization
@@ -94,12 +93,12 @@ using seaborne
 
 ### 6 Decision Trees
 1. Applied Decision Trees on Different Featurization of Data viz. BOW(uni-gram), tfidf, Avg-Word2Vec and tf-idf-Word2Vec 
-2. Used both Grid Search with random 30 points for getting the best max_depth 
+2. Used both Grid Search with random points for getting the best max_depth 
 3. Evaluated the test data on various performance metrics like accuracy, f1-score, precision, recall,etc. also plotted Confusion matrix using seaborne
 4. Plotted feature importance recieved from the decision tree classifier
 
 ###### Conclusions:
-1. BOW Featurization(max_depth=8) gave the best results with accuracy of 85.8% and F1-score of 0.858.
+1. BOW Featurization(max_depth=8) gave the best results with accuracy o& F1 Score.
 2. Decision Trees on BOW and tfidf would have taken forever if had taken all the dimensions as it had huge dimension and hence tried with max 8 as max_depth
 <hr>
 
